@@ -1,0 +1,72 @@
+ input[type=text] {
+           width: 100%;
+           padding: 7px 12px;
+           margin: 6px 0;
+           border: 1.5px solid #ccc;
+           border-radius: 3px;
+           box-sizing: border-box;
+           }
+ input[type=submit] {
+           background-color: #4B0082;
+           border-radius: 5px 5px 5px 5px;
+           color: white;
+           padding: 12px 24px;
+           text-decoration: none;
+           margin: 2px 2px;
+           cursor: pointer
+           }
+           
+           #rcorners1 {
+           border-radius: 10px 10px 10px 10px;
+           border-color: #B3A3C6;
+           border-style:outset;
+           border-size: 0.01px;
+           background: #FFFFFF;
+           padding: 25px; 
+           width: 470px;
+           height: 90px;
+           margin: 10px 430px 0px 430px;
+           }
+         
+           #rcorners2 {
+           border-radius: 10px 10px 10px 10px;
+           border-color: #B3A3C6;
+           border-style:outset;
+           border-size: 0.01px;
+           background: #FFFFFF;
+           padding: 25px; 
+           width: 470px;
+           height: 230px;
+           margin: 10px 430px 0px 430px;
+
+           div.item {
+	min-width: 200px;
+	width: 20%;
+	height: 450px;
+	background-color: #043119;
+	float: left;
+	margin: 20px;
+	padding: 12px;
+	position: relative;
+}
+
+div.item button {
+	position: absolute;
+	bottom: 7px;
+	right: 7px;
+}
+
+span.item {
+	line-height: 16px;
+	font-size: 15px;
+	color: #96b700;
+
+}
+
+span.item b {
+	margin-right: 10px;
+}
+
+span.undefined {
+	color: #ff4200;
+}
