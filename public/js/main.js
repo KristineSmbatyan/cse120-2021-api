@@ -215,7 +215,7 @@ function displayData(data, containerDivName) {
     })
 
 }
-document.querySelectorAll("#bookDataContainer div.item").forEach(div => {
+    document.querySelectorAll("#bookDataContainer div.item").forEach(div => {
       div.addEventListener("click", function(e){
         if (this.style.height == "auto") {
           this.style.height = "30px";
@@ -225,8 +225,6 @@ document.querySelectorAll("#bookDataContainer div.item").forEach(div => {
       })        
     })
 
-
- 
 
  
  function updateHobbyDataChanges(e) {
