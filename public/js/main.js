@@ -1,15 +1,19 @@
-
 var loadedData = [];
 
-function loadEditItem() {
+function loadBookEditItem() {
     localStorage = window.localStorage;
     editItem = JSON.parse(localStorage.getItem("editItem"));
     console.log(editItem);
     document.getElementById("_id").innerHTML = editItem["_id"];
     document.getElementById("title").value = editItem["title"];
-    document.getElementById("fullname").value = editItem["fullName"];   
+    document.getElementById("name").value = editItem["fullName"];   
     document.getElementById("author").value = editItem["author"];   
-    document.getElementById("pages").value = editItem["noOfPgs"];
+    document.getElementById("pages").value = editItem["pages"];
+    document.getElementById("colour").value = editItem["colour"];
+    document.getElementById("CoverType").value = editItem["CoverType"];
+    document.getElementById("Price").value = editItem["Price"];
+    document.getElementById("Currency").value = editItem["Currency"];
+    
 }
 
 function editData(id) {
@@ -21,9 +25,44 @@ function editData(id) {
             console.log(item); 
             localStorage = window.localStorage;
             localStorage.setItem('editItem', JSON.stringify(item));
-            document.location  = "form.html"; 
+            document.location  = "edit_book.html"; 
         }
     })
+}
+
+function loadHobbyEditItem() {
+    localStorage = window.localStorage;
+    editItem = JSON.parse(localStorage.getItem("editItem"));
+    console.log(editItem);
+    document.getElementById("_id").innerHTML = editItem["_id"];
+    document.getElementById("name").value = editItem["fullName"];
+    document.getElementById("Q1").value = editItem["startDate"];   
+    document.getElementById("Q1'").value = editItem["fallInLove"];   
+    document.getElementById("Q2").value = editItem["firstTeacher"];
+    document.getElementById("Q3.1").value = editItem["playingYearLenght"];
+    document.getElementById("Q4").value = editItem["beautifulTrait"];
+    document.getElementById("Q5").value = editItem["favPlayer"];
+    document.getElementById("Q6").value = editItem["playingStyle"];
+    document.getElementById("Q7").value = editItem["FIDErating"];
+}
+
+function editData(id) {
+    var tmp = id.split("edit_");
+    var item_id = tmp[1];
+
+    loadedData.forEach(item => {
+        if (item._id == item_id) {
+            console.log(item); 
+            localStorage = window.localStorage;
+            localStorage.setItem('editItem', JSON.stringify(item));
+            if (item.project == "Chess") {
+              document.location  = "edit_hobby.html";
+            } else {
+              document.location  = "edit_book.html";
+            
+        }
+     }
+})
 }
 
 function deleteData(id) {
@@ -39,7 +78,7 @@ function deleteData(id) {
 
     $.ajax({
         type: 'POST',
-        url: "https://cse120-2021-api.herokuapp.com/data/delete",
+        url: "https://cse120-2021-kristine.herokuapp.com/data/delete",
         data: tmp,
         cache: false,
         dataType : 'json',
@@ -63,7 +102,7 @@ function saveData() {
 
     $.ajax({
         type: 'POST',
-        url: "https://cse120-2021-api.herokuapp.com/data",
+        url: "https://cse120-2021-kristine.herokuapp.com/data",
         data: tmp,
         cache: false,
         dataType : 'json',
@@ -80,23 +119,40 @@ function saveData() {
 }
 
 function loadExistingData() {
-    $.ajax({
-        type : "GET",
-        url : "https://cse120-2021-api.herokuapp.com/data",
-        dataType : "json",
-        success : function(data) {
-        	console.log("success", data);
-            displayData(data.data);
-        },
-        error : function(data) {
-            console.log("Error")
-        }
-    });
+  myHobbyData = [];
+  myBookData = [];
+  otherData = [];
+  $.ajax({
+      type : "GET",
+      url : "https://cse120-2021-kristine.herokuapp.com/data",
+      dataType : "json",
+      success : function(data) {
+        console.log("success", data);
+        loadedData = data.data;
+        data.data.forEach(elem => {
+          if (elem["owner"] == "Kristine Smbatyan") {
+            if (elem["project"] == "Chess") {
+              myHobbyData.push(elem);
+            } else {
+              myBookData.push(elem);
+            }
+          } else {
+            otherData.push(elem);
+          }
+        })
+        displayData(myHobbyData, "chessDataContainer");
+        displayData(myBookData, "bookDataContainer");
+        displayData(otherData, "otherDataContainer");
+      },
+      error : function(data) {
+          console.log("Error")
+      }
+  });
 }
 
-function displayData(data) {
-    loadedData = data;
-    document.getElementById("dataContainer").innerHTML = "";
+function displayData(data, containerDivName) {
+    
+    document.getElementById(containerDivName).innerHTML = "";
     data.forEach(elem => {
         var item = document.createElement("div");
         item.id = "div" + elem["_id"];
@@ -145,7 +201,104 @@ function displayData(data) {
             deleteData(e.target.id);
         }, false);
         item.appendChild(button);
-        document.getElementById("dataContainer").appendChild(item);
+        document.getElementById(containerDivName).appendChild(item);
+    })
+
+    document.querySelectorAll("#chessDataContainer div.item").forEach(div => {
+      div.addEventListener("click", function(e){
+        if (this.style.height == "auto") {
+          this.style.height = "30px";
+        } else {
+          this.style.height = "auto";
+        }
+      })        
     })
 
 }
+
+
+function toggleOtherData() {
+  var otherBox = document.getElementById("otherDataContainer");
+  if (otherBox.style.display == "block") {
+    otherBox.style.display = "none";
+  } else {
+    otherBox.style.display = "block";
+  }
+}
+
+ 
+ function updateHobbyDataChanges(e) {
+  e.preventDefault();
+  var updatedHobby = {};
+  updatedHobby.id = document.getElementById("_id").value;
+  updatedHobby.name = document.getElementById("name").value;
+  updatedHobby.Q1= document.getElementById("Q1").value;
+
+  updatedHobby.Q2 = document.getElementById("Q2").value;
+ 
+  updatedHobby.Q4 = document.getElementById("Q4").value;
+  updatedHobby.Q5 = document.getElementById("Q5").value;
+  updatedHobby.Q6 = document.getElementById("Q6").value;
+  updatedHobby.Q7 = document.getElementById("Q7").value;
+  
+ $.ajax({
+      type: 'POST',
+      url: "https://cse120-2021-kristine.herokuapp.com/data/update",
+      data: updatedHobby,
+      cache: false,
+      dataType : 'json',
+      success: function (data) {
+        console.log("success");
+      },
+      error: function (xhr) {
+        console.error("Error in post", xhr);
+      },
+      complete: function () {
+        console.log("Complete");  
+      }
+    });
+  
+}
+function updateBookDataChenges(e) {
+  e.preventDefault();
+  var updatedBook = {};
+  updatedBook.id = document.getElementById("_id").value;
+  updatedBook.fullname = document.getElementById("fullNameForm").value;
+  updatedBook.title = document.getElementById("titleFrom").value;
+  updatedBook.author = document.getElementById("authorForm").value;
+  updatedBook.colour = document.getElementById("colourForm").value;
+  updatedBook.cover = document.getElementById("coverFoorm").value;
+  updatedBook.pages = document.getElementById("pages").value;
+  updatedBook.price = document.getElementById("price").value;
+  updatedBook.currency = document.getElementById("currency").value;
+  updatedBook.language = document.getElementById("language").value;
+  updatedBook.olanguage = document.getElementById("olanguage").value;
+  updatedBook.edition = document.getElementById("edition").value;
+  updatedBook.dimensions = document.getElementById("dimensions").value;
+  updatedBook.publisher = document.getElementById("publisher").value;
+  updatedBook.publishingDate = document.getElementById("publishingDate").value;
+  updatedBook.oPublishingDate = document.getElementById("oPublishingDate").value;
+  updatedBook.genre = document.getElementById("genre").value;
+  updatedBook.ageRestriction = document.getElementById("ageRestriction").value;
+
+
+
+      $.ajax({
+      type: 'POST',
+      url: "https://cse120-2021-kristine.herokuapp.com/data/update",
+      data: updatedBook,
+      cache: false,
+      dataType : 'json',
+      success: function (data) {
+        console.log("success");
+      },
+      error: function (xhr) {
+        console.error("Error in post", xhr);
+      },
+      complete: function () {
+        console.log("Complete");  
+      }
+    });
+  
+}
+
