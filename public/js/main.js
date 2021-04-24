@@ -215,27 +215,7 @@ function displayData(data, containerDivName) {
     })
 
 }
- document.querySelectorAll("#bookDataContainer div.item").forEach(div => {
-      div.addEventListener("click", function(e){
-        if (this.style.height == "auto") {
-          this.style.height = "30px";
-        } else {
-          this.style.height = "auto";
-        }
-      })        
-    })
-
-}
-
-
-function toggleOtherData() {
-  var otherBox = document.getElementById("otherDataContainer");
-  if (otherBox.style.display == "block") {
-    otherBox.style.display = "none";
-  } else {
-    otherBox.style.display = "block";
-  }
-}
+ 
 
  
  function updateHobbyDataChanges(e) {
