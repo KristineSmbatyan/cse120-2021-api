@@ -225,7 +225,7 @@ document.querySelectorAll("#bookDataContainer div.item").forEach(div => {
       })        
     })
 
-}
+
  
 
  
