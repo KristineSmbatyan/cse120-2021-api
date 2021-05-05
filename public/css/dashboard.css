@@ -5,10 +5,17 @@ body {
 }
 a {
   color:rgb(0, 139, 139);
-  font-size: 25px;
+  font-size: 30px;
 
 }
 h1 {
   color: rgb(161, 73, 73);
-  font-size: 40px
+  font-size: 50px
+}
+img{
+  position:absolute;
+  top: 110px;
+  left: 707px;
+  width:auto;
+  height:100px;
 }
