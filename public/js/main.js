@@ -285,7 +285,7 @@ function updateBookDataChenges(e) {
 
       $.ajax({
       type: 'POST',
-      url: "https://cse120-2021-kristine.herokuapp.com/data/update",
+      url: "https://cse120-2021-kristine.herokuapp.com/data",
       data: updatedBook,
       cache: false,
       dataType : 'json',
