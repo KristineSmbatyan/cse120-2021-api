@@ -269,7 +269,7 @@ function updateBookDataChenges(e) {
       updatedBook.title = document.getElementById("titleForm").value;
       updatedBook.author = document.getElementById("authorForm").value;
       updatedBook.colour = document.getElementById("colourForm").value;
-      updatedBook.cover = document.getElementById("coverFoorm").value;
+      updatedBook.cover = document.getElementById("coverForm").value;
       updatedBook.pages = document.getElementById("pages").value;
       updatedBook.price = document.getElementById("price").value;
       updatedBook.currency = document.getElementById("currency").value;
