@@ -6,14 +6,20 @@ function loadBookEditItem() {
     console.log(editItem);
     document.getElementById("_id").innerHTML = editItem["_id"];
     document.getElementById("title").value = editItem["title"];
-    document.getElementById("name").value = editItem["fullName"];   
+    document.getElementById("fname").value = editItem["name"];   
     document.getElementById("author").value = editItem["author"];   
-    document.getElementById("pages").value = editItem["pages"];
+    document.getElementById("Pages").value = editItem["pages"];
     document.getElementById("colour").value = editItem["colour"];
-    document.getElementById("CoverType").value = editItem["CoverType"];
-    document.getElementById("Price").value = editItem["Price"];
-    document.getElementById("Currency").value = editItem["Currency"];
-    
+    document.getElementById("CoverType").value = editItem["coverType"];
+    document.getElementById("Price").value = editItem["price"];
+    document.getElementById("Currency").value = editItem["currency"];
+    document.getElementById("language").value = editItem["language"];
+    document.getElementById("Olanguage").value = editItem["originalLanguage"];
+    document.getElementById("edition").value = editItem["edition"];
+    document.getElementById("dimensions").value = editItem["dimensions"];
+    document.getElementById("publisher").value = editItem["publisher"];
+    document.getElementById("publishing date").value = editItem["publishingDate"];
+    document.getElementById("AR").value = editItem["ageRestriction"];
 }
 
 function editData(id) {
