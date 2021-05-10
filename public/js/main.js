@@ -243,7 +243,7 @@ function displayData(data, containerDivName) {
 	  
  $.ajax({
       type: 'POST',
-      url: "https://cse120-2021-kristine.herokuapp.com/data",
+      url: "https://cse120-2021-kristine.herokuapp.com",
       data: updatedHobby,
       cache: false,
       dataType : 'json',
@@ -263,7 +263,7 @@ function displayData(data, containerDivName) {
 function updateBookDataChenges(e) {
   e.preventDefault();
   var updatedBook = {};
-  updatedBook.id = document.getElementById("_id").value;
+  updatedBook.id = document.getElementById("_id").innerHTML;
   updatedBook.fullname = document.getElementById("fullNameForm").value;
   updatedBook.title = document.getElementById("titleFrom").value;
   updatedBook.author = document.getElementById("authorForm").value;
