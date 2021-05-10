@@ -266,7 +266,7 @@ function updateBookDataChenges(e) {
       var updatedBook = {};
       updatedBook.id = document.getElementById("_id").innerHTML;
       updatedBook.fullname = document.getElementById("fullNameForm").value;
-      updatedBook.title = document.getElementById("titleFrom").value;
+      updatedBook.title = document.getElementById("titleForm").value;
       updatedBook.author = document.getElementById("authorForm").value;
       updatedBook.colour = document.getElementById("colourForm").value;
       updatedBook.cover = document.getElementById("coverFoorm").value;
