@@ -233,7 +233,6 @@ function displayData(data, containerDivName) {
   updatedHobby.id = document.getElementById("_id").value;
   updatedHobby.name = document.getElementById("name").value;
   updatedHobby.Q1= document.getElementById("Q1").value;
-   updatedHobby.Q1= document.getElementById("Q1'").value;
   updatedHobby.Q2 = document.getElementById("Q2").value;
  
   updatedHobby.Q4 = document.getElementById("Q4").value;
