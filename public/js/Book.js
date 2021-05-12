@@ -24,6 +24,9 @@ var myFavBooks = {
   "ageRestriction":"",
 
 }
+function goToDashboard() {
+  location.href = "https://cse120-2021-kristine.herokuapp.com/dashboard.html"
+}
 
 function handleFullNameChange(){
     myFavBooks.name = document.getElementById ("fname").value;
