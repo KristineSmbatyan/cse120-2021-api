@@ -82,7 +82,7 @@ function myFavHobbyData(e) {
     return;
   } else {console.log("The current value is", myFavHobby)
     document.getElementById("submit").onclick = function () {
-    location.href = "https://cse120-2021-kristine.herokuapp.com";
+    window.location.href = "https://cse120-2021-kristine.herokuapp.com.php";
     };
   }
 
