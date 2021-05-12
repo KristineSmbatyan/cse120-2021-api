@@ -159,7 +159,7 @@ function loadExistingData() {
 
 function displayData(data, containerDivName) {
     
-    document.getElementById(containerDivName).innerHTML = "";
+    document.getElementById(containerDivName).innerHTML ="";
     data.forEach(elem => {
             var item = document.createElement("div");
       	    item.id = "div" + elem["_id"];
