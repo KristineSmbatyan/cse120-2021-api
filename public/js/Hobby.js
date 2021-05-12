@@ -1,22 +1,23 @@
 var requiredFields = [ "fullName" , "startDate", "fallInLove", "firstTeacher"
 ]
+
 var myFavHobby = {
-"project" : "Chess",
-"owner" : "Kristine Smbatyan",
-"fullName":"",
-"startDate": "",
-"fallInLove": "",
-"firstTeacher": "",
-"playingYearLenght":"",
-"beautifulTrait":"",
-"favPlayer":"",
-"playingStyle":"",
-"FIDErating":""
+  "project" : "Chess",
+  "owner" : "Kristine Smbatyan",
+  "fullName":"",
+  "startDate": "",
+  "fallInLove": "",
+  "firstTeacher": "",
+  "playingYearLenght":"",
+  "beautifulTrait":"",
+  "favPlayer":"",
+  "playingStyle":"",
+  "FIDErating":"",
 }
 
 function handleFullNameChange(){
-     myFavHobby.fullName = document.getElementById ("name").value;
-     if(myFavHobby.fullName ==""){
+  myFavHobby.fullName = document.getElementById ("name").value;
+  if(myFavHobby.fullName ==""){
      document.getElementById("name").style.backgroundColor="#B6271B";
     }else {
     document.getElementById("name").style.backgroundColor="white"
@@ -24,16 +25,17 @@ function handleFullNameChange(){
 }
 
 function handleStartDateChange(){
-     myFavHobby.startDate = document.getElementById ("Q1").value;
-     if(myFavHobby.startDate ==""){
+  myFavHobby.startDate = document.getElementById ("Q1").value;
+  if(myFavHobby.startDate ==""){
      document.getElementById("Q1").style.backgroundColor="#B6271B";
      }else {
     document.getElementById("Q1").style.backgroundColor="white"
   }
 }
+
 function handleFallInLoveChange(){
-     myFavHobby.fallInLove = document.getElementById ("Q1'").value;
-     if(myFavHobby.fullName ==""){
+  myFavHobby.fallInLove = document.getElementById ("Q1'").value;
+  if(myFavHobby.fullName ==""){
      document.getElementById("Q1'").style.backgroundColor="#B6271B";
     }else {
      document.getElementById("Q1'").style.backgroundColor="white"
@@ -41,8 +43,8 @@ function handleFallInLoveChange(){
 }
 
 function handleFirstTeacherChange(){
-     myFavHobby.firstTeacher = document.getElementById ("Q2").value;
-     if(myFavHobby.fullName ==""){
+  myFavHobby.firstTeacher = document.getElementById ("Q2").value;
+  if(myFavHobby.fullName ==""){
      document.getElementById("Q2").style.backgroundColor="#B6271B";
      }else {
      document.getElementById("Q2").style.backgroundColor="white"
@@ -50,20 +52,20 @@ function handleFirstTeacherChange(){
 }
 
 function handlePlayingYearsChange(e){
-     myFavHobby.playingYearLenght = e.target.value;
+    myFavHobby.playingYearLenght = e.target.value;
 }
 
 function handleBeautifulThingChange(){
-     myFavHobby.beautifulTrait = document.getElementById ("Q4").value;
+    myFavHobby.beautifulTrait = document.getElementById ("Q4").value;
 }
 
 function handleFavPlayerChange(){
-     myFavHobby.favPlayer = document.getElementById ("Q5").value;
+    myFavHobby.favPlayer = document.getElementById ("Q5").value;
 }
 
 function handlePlayingStyleChange(e){
-    var value = e.target.value;
-    if (e.target.checked == true) {
+  var value = e.target.value;
+  if (e.target.checked == true) {
     myFavHobby.playingStyle = myFavHobby.playingStyle + "," + value;
   } else {
     myFavHobby.playingStyle = ""
@@ -98,19 +100,20 @@ function myFavHobbyData(e) {
     }
   });
 }
+
 function validateFormData() {
-  var isFormValid = true;
-  var keys = Object.keys(myFavHobby);
-  keys.forEach(key => {
-      if (requiredFields.indexOf(key) > -1 && myFavHobby[key] == "") { console.log(key, " is a required field, please add a value") 
-      if(document.getElementById(key)) {
-        document.getElementById(key).style.backgroundColor = "red"; 
-        isFormValid = false;
-      }
-    }   
-  })
-  return isFormValid;
-}
+    var isFormValid = true;
+    var keys = Object.keys(myFavHobby);
+    keys.forEach(key => {
+        if (requiredFields.indexOf(key) > -1 && myFavHobby[key] == "") { console.log(key, " is a required field, please add a value") 
+        if(document.getElementById(key)) {
+          document.getElementById(key).style.backgroundColor = "red"; 
+          isFormValid = false;
+        }
+      }   
+    })
+    return isFormValid;
+  }
 
 function saveData() {
 	var tmp = {

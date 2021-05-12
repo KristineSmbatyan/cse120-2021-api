@@ -1,4 +1,4 @@
-var myFavBooks= {
+var myFavBooks = {
   "owner":"Kristine Smbatyan",
   "project": "Book",
   "name":"",
@@ -21,10 +21,10 @@ var myFavBooks= {
   "genre":"",
   "ageRestriction":"",
 
-
 }
+
 function handleFullNameChange(){
-     myFavBooks.name = document.getElementById ("fname").value;
+    myFavBooks.name = document.getElementById ("fname").value;
 }
 
 function titleValue(){
@@ -81,8 +81,8 @@ function genreValue(){
  
 
 function handleCoverValueChange(e) {
-     myFavBooks.coverType = e.target.value;
-     if (myFavBooks.coverType != "other") {
+  myFavBooks.coverType = e.target.value;
+  if (myFavBooks.coverType != "other") {
      myFavBooks.otherCoverValue ="";
      document.getElementById("otherCoverType").style.display="none";
      }else{
@@ -91,14 +91,13 @@ function handleCoverValueChange(e) {
 }
 
 function otherTextValue() {
-    if (myFavBooks.coverType =="other");
-    otherCover = getElementById("otherText").value;
-  
+  if (myFavBooks.coverType =="other");
+    otherCover = getElementById("otherText").value; 
 }
 
 function handleLanguageChange(event){
-    myFavBooks.language= event.target.value;
-    if (myFavBooks.language != "OtherLang"){
+  myFavBooks.language= event.target.value;
+  if (myFavBooks.language != "OtherLang"){
     myFavBooks.otherLanguage="";
     document.getElementById("otherLangText").style.display="none";
   } else{
@@ -130,11 +129,12 @@ function otherOrigLangText(){
 }
 
 function showData(e) {
-   e.preventDefault();
+  e.preventDefault();
     if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavBooks)
   }
+
   $.ajax({
     type: 'POST',
     url: "https://cse120-2021-kristine.herokuapp.com/data",
@@ -151,8 +151,9 @@ function showData(e) {
       console.log("Complete");  
     }
   });  
+}
 
-  function loadExistingData() {
+function loadExistingData() {
   var existingData = [];
   $.ajax({
     type: "GET",
@@ -161,14 +162,22 @@ function showData(e) {
     cache: false,
     dataType: "json",
     success: function (data) {
-      console.log("success", data);
-      existingData = data;
-      displayData(existingData.data);
+    console.log("success", data);
+    existingData = data;
+    displayData(existingData.data);
     },
-    error: function (data) {
-      console.log("Error")
+    error : function (data) {
+        console.log("Error")
     }
   });
 }
+  function displayData(existingData) {
+    document.getElementById("existingData").innerHTML = "<ul>";
+    for (var i = 0; i < existingData.length; i++) {
+      currentBook = existingData[i];
+      document.getElementById("existingData").innerHTML += "<li><i>" + currentBook.fullname + "</li> : <b>" + currentBook.title + "</b></li>";
+    }
+    document.getElementById("existingData").innerHTML += "</ul>" 
+  }
 
   
