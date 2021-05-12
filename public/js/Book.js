@@ -39,15 +39,15 @@ function colourValue(){
     myFavBooks.colour = document.getElementById ("colour").value;
 }
 
- function pagesValue(){
+function pagesValue(){
      myFavBooks.pages = document.getElementById ("Pages").value;
 }
 
- function priceValue(){
+function priceValue(){
      myFavBooks.price = document.getElementById ("Price").value;
 }
 
- function currencyValue(){
+function currencyValue(){
      myFavBooks.currency = document.getElementById ("Currency").value;
 }
 
@@ -59,27 +59,26 @@ function dimensionValue(){
      myFavBooks.dimensions = document.getElementById ("dimensions").value;
 }
 
- function publisherValue(){
+function publisherValue(){
      myFavBooks.publisher = document.getElementById ("publisher").value;
 }
 
- function publishingDateValue(){
+function publishingDateValue(){
      myFavBooks.publishingDate = document.getElementById ("publishing date").value;
 }
  
- function originalPublishingDateValue(){
+function originalPublishingDateValue(){
      myFavBooks.publishingDate = document.getElementById ("oPDate").value;
- }
+}
 
 function genreValue(){
      myFavBooks.genre = document.getElementById ("genre").value;
- }
+}
 
- function ageRestrictionValue(){
+function ageRestrictionValue(){
      myFavBooks.ageRestriction = document.getElementById ("AR").value;
- }
+}
  
-
 function handleCoverValueChange(e) {
   myFavBooks.coverType = e.target.value;
   if (myFavBooks.coverType != "other") {
