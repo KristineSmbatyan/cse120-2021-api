@@ -152,6 +152,23 @@ function showData(e) {
     }
   });  
 
- 
+  function loadExistingData() {
+  var existingData = [];
+  $.ajax({
+    type: "GET",
+    url: "https://cse120-2021-api-maria.herokuapp.com/data",
+    data: MyFavBooks,
+    cache: false,
+    dataType: "json",
+    success: function (data) {
+      console.log("success", data);
+      existingData = data;
+      displayData(existingData.data);
+    },
+    error: function (data) {
+      console.log("Error")
+    }
+  });
+}
 
   
