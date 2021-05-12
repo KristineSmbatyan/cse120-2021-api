@@ -1,23 +1,22 @@
 var requiredFields = [ "fullName" , "startDate", "fallInLove", "firstTeacher"
 ]
-
 var myFavHobby = {
-    "project" : "Chess",
-    "owner" : "Kristine Smbatyan",
-    "fullName":"",
-    "startDate": "",
-    "fallInLove": "",
-    "firstTeacher": "",
-    "playingYearLenght":"",
-    "beautifulTrait":"",
-    "favPlayer":"",
-    "playingStyle":"",
-    "FIDErating":"",
+"project" : "Chess",
+"owner" : "Kristine Smbatyan",
+"fullName":"",
+"startDate": "",
+"fallInLove": "",
+"firstTeacher": "",
+"playingYearLenght":"",
+"beautifulTrait":"",
+"favPlayer":"",
+"playingStyle":"",
+"FIDErating":""
 }
 
 function handleFullNameChange(){
-  myFavHobby.fullName = document.getElementById ("name").value;
-  if(myFavHobby.fullName ==""){
+   myFavHobby.fullName = document.getElementById ("name").value;
+   if(myFavHobby.fullName ==""){
      document.getElementById("name").style.backgroundColor="#B6271B";
     }else {
     document.getElementById("name").style.backgroundColor="white"
@@ -79,10 +78,11 @@ function handleRatingChange() {
 
 function myFavHobbyData(e) {
   e.preventDefault();
-  if(validateFormData() == false) {
+    if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavHobby)
   }
+
   $.ajax({
     type: 'POST',
     url: "https://cse120-2021-kristine.herokuapp.com/data",
@@ -90,10 +90,10 @@ function myFavHobbyData(e) {
     cache: false,
     dataType : 'json',
     success: function (data) {
-      console.log("success");
+    console.log("success");
     },
     error: function (xhr) {
-      console.error("Error in post", xhr);
+    console.error("Error in post", xhr);
     },
     complete: function () {
       console.log("Complete");  
@@ -113,29 +113,6 @@ function validateFormData() {
       }   
     })
     return isFormValid;
-  }
-
-function saveData() {
-	var tmp = {
-		"test": "Data"
-	}
-
-    $.ajax({
-        type: 'POST',
-        url: "https://cse120-2021-kristine.herokuapp.com/data",
-        data: tmp,
-        cache: false,
-        dataType : 'json',
-        success: function (data) {
-        	console.log("success");
-        },
-        error: function (xhr) {
-            console.error("Error in post", xhr);
-        },
-        complete: function () {
-            console.log("Complete");  
-        }
-    });
 }
 
 function loadExistingData() {
@@ -144,6 +121,8 @@ function loadExistingData() {
     type : "GET",
     url : "https://cse120-2021-kristine.herokuapp.com/data",
     dataType : "json",
+    data : MyFavHobby ,
+    cache : false ,
     success : function(data) {
     console.log("success", data);
     existingData = data;
