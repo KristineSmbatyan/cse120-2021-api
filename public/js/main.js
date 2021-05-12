@@ -249,7 +249,7 @@ function displayData(data, containerDivName) {
 	  
  $.ajax({
       type: 'POST',
-      url: "https://cse120-2021-kristine.herokuapp.com",
+      url: "/data/update",
       data: updatedHobby,
       cache: false,
       dataType : 'json',
@@ -270,16 +270,16 @@ function updateBookDataChenges(e) {
       e.preventDefault();
       var updatedBook = {};
       updatedBook.id = document.getElementById("_id").innerHTML;
-      updatedBook.fullname = document.getElementById("fullNameForm").value;
-      updatedBook.title = document.getElementById("titleForm").value;
-      updatedBook.author = document.getElementById("authorForm").value;
-      updatedBook.colour = document.getElementById("colourForm").value;
-      updatedBook.cover = document.getElementById("coverForm").value;
+      updatedBook.fullname = document.getElementById("name").value;
+      updatedBook.title = document.getElementById("title").value;
+      updatedBook.author = document.getElementById("author").value;
+      updatedBook.colour = document.getElementById("colour").value;
+      updatedBook.cover = document.getElementById("coverType").value;
       updatedBook.pages = document.getElementById("pages").value;
       updatedBook.price = document.getElementById("price").value;
       updatedBook.currency = document.getElementById("currency").value;
       updatedBook.language = document.getElementById("language").value;
-      updatedBook.olanguage = document.getElementById("olanguage").value;
+      updatedBook.olanguage = document.getElementById("originalLanguage").value;
       updatedBook.edition = document.getElementById("edition").value;
       updatedBook.dimensions = document.getElementById("dimensions").value;
       updatedBook.publisher = document.getElementById("publisher").value;
@@ -292,7 +292,7 @@ function updateBookDataChenges(e) {
 
       $.ajax({
       type: 'POST',
-      url: "https://cse120-2021-kristine.herokuapp.com",
+      url: "/data/update",
       data: updatedBook,
       cache: false,
       dataType : 'json',
