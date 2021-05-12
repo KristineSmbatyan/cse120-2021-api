@@ -1,5 +1,6 @@
 var requiredFields = [ "fullName" , "startDate", "fallInLove", "firstTeacher"
 ]
+
 var myFavHobby = {
 "project" : "Chess",
 "owner" : "Kristine Smbatyan",
@@ -12,6 +13,9 @@ var myFavHobby = {
 "favPlayer":"",
 "playingStyle":"",
 "FIDErating":""
+}
+function goToDashboard() {
+  location.href = "https://cse120-2021-kristine.herokuapp.com/dashboard.html"
 }
 
 function handleFullNameChange(){
