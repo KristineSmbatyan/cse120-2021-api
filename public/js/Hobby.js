@@ -2,17 +2,17 @@ var requiredFields = [ "fullName" , "startDate", "fallInLove", "firstTeacher"
 ]
 
 var myFavHobby = {
-  "project" : "Chess",
-  "owner" : "Kristine Smbatyan",
-  "fullName":"",
-  "startDate": "",
-  "fallInLove": "",
-  "firstTeacher": "",
-  "playingYearLenght":"",
-  "beautifulTrait":"",
-  "favPlayer":"",
-  "playingStyle":"",
-  "FIDErating":"",
+    "project" : "Chess",
+    "owner" : "Kristine Smbatyan",
+    "fullName":"",
+    "startDate": "",
+    "fallInLove": "",
+    "firstTeacher": "",
+    "playingYearLenght":"",
+    "beautifulTrait":"",
+    "favPlayer":"",
+    "playingStyle":"",
+    "FIDErating":"",
 }
 
 function handleFullNameChange(){
@@ -79,7 +79,7 @@ function handleRatingChange() {
 
 function myFavHobbyData(e) {
   e.preventDefault();
-    if(validateFormData() == false) {
+  if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavHobby)
   }
