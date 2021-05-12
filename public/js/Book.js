@@ -1,3 +1,5 @@
+var requiredFields = [ "name" , "title", "author", "coverType", "pages", "publisher", "genre"
+]
 var myFavBooks = {
   "owner":"Kristine Smbatyan",
   "project": "Book",
@@ -152,6 +154,20 @@ function showData(e) {
   });  
 }
 
+function validateFormData() {
+    var isFormValid = true;
+    var keys = Object.keys(myFavBooks);
+    keys.forEach(key => {
+        if (requiredFields.indexOf(key) > -1 && myFavHobby[key] == "") { console.log(key, " is a required field, please add a value") 
+        if(document.getElementById(key)) {
+          document.getElementById(key).style.backgroundColor = "red"; 
+          isFormValid = false;
+        }
+      }   
+    })
+    return isFormValid;
+}
+
 function loadExistingData() {
   var existingData = [];
   $.ajax({
@@ -170,13 +186,14 @@ function loadExistingData() {
     }
   });
 }
-  function displayData(existingData) {
+
+function displayData(existingData) {
     document.getElementById("existingData").innerHTML = "<ul>";
     for (var i = 0; i < existingData.length; i++) {
       currentBook = existingData[i];
       document.getElementById("existingData").innerHTML += "<li><i>" + currentBook.fullname + "</li> : <b>" + currentBook.title + "</b></li>";
     }
     document.getElementById("existingData").innerHTML += "</ul>" 
-  }
+}
 
   
