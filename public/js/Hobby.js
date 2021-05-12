@@ -81,9 +81,8 @@ function myFavHobbyData(e) {
   if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavHobby)
-    document.getElementById("submit").onclick = function () {
-    window.location.href = "https://cse120-2021-kristine.herokuapp.com/index.html";
-    };
+  window.location.href = "https://cse120-2021-kristine.herokuapp.com/index.html"
+
   }
 
   $.ajax({
