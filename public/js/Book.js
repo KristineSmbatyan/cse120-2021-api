@@ -96,8 +96,8 @@ function otherTextValue() {
     otherCover = getElementById("otherText").value; 
 }
 
-function handleLanguageChange(event){
-  myFavBooks.language= event.target.value;
+function handleLanguageChange(e){
+  myFavBooks.language= e.target.value;
   if (myFavBooks.language != "OtherLang"){
     myFavBooks.otherLanguage="";
     document.getElementById("otherLangText").style.display="none";
@@ -107,8 +107,8 @@ function handleLanguageChange(event){
 }
  
 
-function handleOrigLaguageChange(event){
-  myFavBooks.language= event.target.value;
+function handleOrigLaguageChange(e){
+  myFavBooks.originalLanguage = e.target.value;
   if (myFavBooks.language != "OtherLang"){
     myFavBooks.otherLanguage="";
     document.getElementById("otherLangText").style.display="none";
