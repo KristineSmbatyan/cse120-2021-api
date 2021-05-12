@@ -17,10 +17,10 @@ var myFavHobby = {
 function handleFullNameChange(){
    myFavHobby.fullName = document.getElementById ("name").value;
    if(myFavHobby.fullName ==""){
-     document.getElementById("name").style.backgroundColor="#B6271B";
-    }else {
+       document.getElementById("name").style.backgroundColor="#B6271B";
+      }else {
     document.getElementById("name").style.backgroundColor="white"
-  }
+      }
 }
 
 function handleStartDateChange(){
@@ -135,10 +135,10 @@ function loadExistingData() {
 }
 
 function displayData(existingData) {
-  document.getElementById("existingData").innerHTML = "<ul>";
-  for (var i = 0; i < existingData.length; i++) {
-    currentBook = existingData[i];
-    document.getElementById("existingData").innerHTML += "<li><i>" + currentBook.fullname + "</li> : <b>" + currentBook.title + "</b></li>";
-  }
-  document.getElementById("existingData").innerHTML += "</ul>" 
+    document.getElementById("existingData").innerHTML = "<ul>";
+    for (var i = 0; i < existingData.length; i++) {
+      currentBook = existingData[i];
+      document.getElementById("existingData").innerHTML += "<li><i>" + currentBook.fullname + "</li> : <b>" + currentBook.title + "</b></li>";
+    }
+    document.getElementById("existingData").innerHTML += "</ul>" 
 }
