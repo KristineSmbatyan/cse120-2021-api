@@ -134,6 +134,7 @@ function showData(e) {
     if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavBooks)
+    location.replace("https://cse120-2021-kristine.herokuapp.com/index.html")
   }
 
   $.ajax({
@@ -172,7 +173,7 @@ function loadExistingData() {
   var existingData = [];
   $.ajax({
     type: "GET",
-    url: "https://cse120-2021-api-maria.herokuapp.com/data",
+    url: "https://cse120-2021-kristine.herokuapp.com/data",
     data: MyFavBooks,
     cache: false,
     dataType: "json",
