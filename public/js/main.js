@@ -1,5 +1,9 @@
 var loadedData = [];
 
+function goToDashboard() {
+  location.href = "https://cse120-2021-kristine.herokuapp.com/dashboard.html"
+}
+
 function loadBookEditItem() {
     localStorage = window.localStorage;
     editItem = JSON.parse(localStorage.getItem("editItem"));
