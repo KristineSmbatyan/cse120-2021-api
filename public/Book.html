@@ -52,11 +52,11 @@
            <label for="ctype" id="cover">Cover Type:</label>
            <sup class="star"><span        
            style="color:#ce0202;font-weight:bold">*</span></sup><br><br> 
-           <input type="radio" id="pback" name="CoverType" value="Paperback" onclick="handleCoverValueChange(event)">
+           <input type="radio" id="pback" name="CoverType" value="Paperback" onchange="handleCoverValueChange(event)">
            <label for="pback">Paperback</label><br><br>
-           <input type="radio" id="hcover" name="CoverType" value="Hardcover" onclick="handleCoverValueChange(event)">
+           <input type="radio" id="hcover" name="CoverType" value="Hardcover" onchange="handleCoverValueChange(event)">
            <label for="hcover">Hardcover</label><br><br>
-           <input type="radio" id="other" name="CoverType" value="other" onclick="handleCoverValueChange(event)">
+           <input type="radio" id="other" name="CoverType" value="other" onchange="handleCoverValueChange(event)">
            <label for="other">Other</label><br><br>
            <input type="text" id="otherCoverType" placeholder="Your Answer"  onblur="otherTextValue()" styel="display:none" >
            
@@ -90,11 +90,11 @@
            
        <div id="rcorners2">
            <label for="Olanguage">Original Language</label><br><br>
-           <input type="radio" id="english" name="origLang" onchange="handleOrigLaguageChange(event)">
+           <input type="radio" id="english" name="origLang" value="English" onchange="handleOrigLaguageChange(event)">
            <label for="english"> English</label><br><br>
-           <input type="radio" id="armenian" name="origLang" onchange="handleOrigLaguageChange(event)">
+           <input type="radio" id="armenian"name="origLang" value="Armenian" onchange="handleOrigLaguageChange(event)">
            <label for="armenian"> Armenian</label><br><br>
-           <input type="radio" id="russian" name="origLang" onchange="handleOrigLaguageChange(event)">
+           <input type="radio" id="russian" name="origLang" value= "Russian" onchange="handleOrigLaguageChange(event)">
            <label for="russian"> Russian</label><br><br>
            <input type="radio" id="otherOrigLang" name="origLang" >
            <label for="otherOrigLang"> Other</label>
