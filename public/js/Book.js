@@ -1,4 +1,4 @@
-var requiredFields = [ "name" , "title", "author", "coverType", "pages", "publisher", "genre"
+var requiredFields = [ "name" , "title", "author", "pages", "publisher", "genre"
 ]
 var myFavBooks = {
   "owner":"Kristine Smbatyan",
@@ -42,7 +42,7 @@ function colourValue(){
 }
 
 function pagesValue(){
-     myFavBooks.pages = document.getElementById ("Pages").value;
+     myFavBooks.pages = document.getElementById ("pages").value;
 }
 
 function priceValue(){

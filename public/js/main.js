@@ -8,7 +8,7 @@ function loadBookEditItem() {
     document.getElementById("title").value = editItem["title"];
     document.getElementById("fname").value = editItem["name"];   
     document.getElementById("author").value = editItem["author"];   
-    document.getElementById("Pages").value = editItem["pages"];
+    document.getElementById("pages").value = editItem["pages"];
     document.getElementById("colour").value = editItem["colour"];
     document.getElementById("CoverType").value = editItem["coverType"];
     document.getElementById("Price").value = editItem["price"];
