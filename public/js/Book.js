@@ -137,7 +137,7 @@ function showData(e) {
     if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavBooks)
-    location.replace("https://cse120-2021-kristine.herokuapp.com/dashboard.html")
+    Swal.fire("Our First Alert", "With some body text and success icon!", "success");
   }
 
   $.ajax({
