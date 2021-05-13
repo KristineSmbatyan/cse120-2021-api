@@ -10,7 +10,7 @@ function loadBookEditItem() {
     console.log(editItem);
     document.getElementById("_id").innerHTML = editItem["_id"];
     document.getElementById("title").value = editItem["title"];
-    document.getElementById("fname").value = editItem["name"];   
+    document.getElementById("name").value = editItem["name"];   
     document.getElementById("author").value = editItem["author"];   
     document.getElementById("pages").value = editItem["pages"];
     document.getElementById("colour").value = editItem["colour"];
