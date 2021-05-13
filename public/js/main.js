@@ -23,6 +23,7 @@ function loadBookEditItem() {
     document.getElementById("dimensions").value = editItem["dimensions"];
     document.getElementById("publisher").value = editItem["publisher"];
     document.getElementById("publishing date").value = editItem["publishingDate"];
+    document.getElementById("genre").value = editItem["genre"];
     document.getElementById("AR").value = editItem["ageRestriction"];
 }
 
