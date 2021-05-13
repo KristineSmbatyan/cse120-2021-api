@@ -137,8 +137,10 @@ function showData(e) {
     if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavBooks)
-    Swal.fire("Good Job!", "Keep Playing Chess!", "success", {
-      buttons: ["home"]
+    Swal.fire("Good Job!", "Keep Playing Chess!", "success",).then(okay => {
+    if (okay) {
+       window.location.href = "https://cse120-2021-kristine.herokuapp.com/dashboard.html";
+    }
     });
   }
 
