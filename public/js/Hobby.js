@@ -93,7 +93,7 @@ function myFavHobbyData(e) {
   }
 
 
-  }
+  
 
   $.ajax({
     type: 'POST',
