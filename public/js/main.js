@@ -265,7 +265,8 @@ function displayData(data, containerDivName) {
         console.error("Error in post", xhr);
       },
       complete: function () {
-        console.log("Complete");  
+        console.log("Complete"); 
+         window.location.href = "https://cse120-2021-kristine.herokuapp.com" 
       }
     });
   
