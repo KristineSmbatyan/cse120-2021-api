@@ -48,7 +48,7 @@
            <label for="author">Author:</label>
            <sup class="star"><span        
            style="color:#ce0202; font-weight:bold">*</span></sup><br><br>
-           <input type="text" id="Author" name="author" placeholder="Your Answer" required onblur="authorValue()"><br><br> 
+           <input type="text" id="author" name="author" placeholder="Your Answer" required onblur="authorValue()"><br><br> 
        </div>
        <div id="rcorners1">
            <label for="colour">Colour:</label><br><br>
@@ -93,7 +93,7 @@
            </div>
            
        <div id="rcorners2">
-           <label for="Olanguage">Original Language</label><br><br>
+           <label for="origlanguage">Original Language</label><br><br>
            <input type="radio" id="english" name="origLang" value="English" onchange="handleOrigLaguageChange(event)">
            <label for="english"> English</label><br><br>
            <input type="radio" id="armenian"name="origLang" value="Armenian" onchange="handleOrigLaguageChange(event)">
@@ -102,7 +102,7 @@
            <label for="russian"> Russian</label><br><br>
            <input type="radio" id="otherOrigLang" name="origLang" >
            <label for="otherOrigLang"> Other</label>
-           <input type="text" id="otherOrigLangText" name="origLang" placeholder="Your Answer" onblur="otherOrigLangText()"><br><br>
+           <input type="text" id="otherOrigLangText" name="origLang" placeholder="Your Answer" onblur="handleOtherOrigLangText()"><br><br>
        </div>
 
        <div id="rcorners1">

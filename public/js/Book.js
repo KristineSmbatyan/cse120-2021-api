@@ -69,7 +69,7 @@ function publisherValue(){
 }
 
 function publishingDateValue(){
-     myFavBooks.publishingDate = document.getElementById ("publishing date").value;
+     myFavBooks.publishingDate = document.getElementById ("publishingDate").value;
 }
  
 function originalPublishingDateValue(){

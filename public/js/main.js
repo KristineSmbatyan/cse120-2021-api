@@ -9,12 +9,12 @@ function loadBookEditItem() {
     editItem = JSON.parse(localStorage.getItem("editItem"));
     console.log(editItem);
     document.getElementById("_id").innerHTML = editItem["_id"];
+    document.getElementById("name").value = editItem["name"]; 
     document.getElementById("title").value = editItem["title"];
-    document.getElementById("name").value = editItem["name"];   
     document.getElementById("author").value = editItem["author"];   
-    document.getElementById("pages").value = editItem["pages"];
     document.getElementById("colour").value = editItem["colour"];
     document.getElementById("coverType").value = editItem["coverType"];
+    document.getElementById("pages").value = editItem["pages"];
     document.getElementById("price").value = editItem["price"];
     document.getElementById("currency").value = editItem["currency"];
     document.getElementById("language").value = editItem["language"];
@@ -22,7 +22,7 @@ function loadBookEditItem() {
     document.getElementById("edition").value = editItem["edition"];
     document.getElementById("dimensions").value = editItem["dimensions"];
     document.getElementById("publisher").value = editItem["publisher"];
-    document.getElementById("publishing date").value = editItem["publishingDate"];
+    document.getElementById("publishingDate").value = editItem["publishingDate"];
     document.getElementById("genre").value = editItem["genre"];
     document.getElementById("ageRestriction").value = editItem["ageRestriction"];
 }
