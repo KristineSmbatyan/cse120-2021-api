@@ -254,7 +254,7 @@ function displayData(data, containerDivName) {
 	  
  $.ajax({
       type: 'POST',
-      url: "/data/update",
+      url: "https://cse120-2021-kristine.herokuapp.com/data/update",
       data: updatedHobby,
       cache: false,
       dataType : 'json',
@@ -297,7 +297,7 @@ function updateBookDataChenges(e) {
 
       $.ajax({
       type: 'POST',
-      url: "/data/update",
+      url: "https://cse120-2021-kristine.herokuapp.com/data/update",
       data: updatedBook,
       cache: false,
       dataType : 'json',
