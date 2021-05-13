@@ -137,7 +137,9 @@ function showData(e) {
     if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavBooks)
-    Swal.fire("Good Job!", "Keep Playing Chess!", "success");
+    Swal.fire("Good Job!", "Keep Playing Chess!", "success", {
+      buttons: ["home"]
+    });
   }
 
   $.ajax({
