@@ -85,7 +85,13 @@ function myFavHobbyData(e) {
   if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavHobby)
-    location.replace("https://cse120-2021-kristine.herokuapp.com/dashboard.html")
+    Swal.fire("Good Job!", "Keep Playing Chess!", "success",).then(okay => {
+    if (okay) {
+       window.location.href = "https://cse120-2021-kristine.herokuapp.com/dashboard.html";
+    }
+    });
+  }
+
 
   }
 
