@@ -242,14 +242,14 @@ function displayData(data, containerDivName) {
       e.preventDefault();
       var updatedHobby = {};
       updatedHobby.id = document.getElementById("_id").value;
-      updatedHobby.name = document.getElementById("name").value;
-      updatedHobby.Q1= document.getElementById("Q1").value;
-      updatedHobby.Q2 = document.getElementById("Q2").value;
+      updatedHobby.fullName = document.getElementById("name").value;
+      updatedHobby.startDate= document.getElementById("Q1").value;
+      updatedHobby.firstTeacher = document.getElementById("Q2").value;
      
-      updatedHobby.Q4 = document.getElementById("Q4").value;
-      updatedHobby.Q5 = document.getElementById("Q5").value;
-      updatedHobby.Q6 = document.getElementById("Q6").value;
-      updatedHobby.Q7 = document.getElementById("Q7").value;
+      updatedHobby.beautifulTrait = document.getElementById("Q4").value;
+      updatedHobby.favPlayer = document.getElementById("Q5").value;
+      updatedHobby.playingStyle = document.getElementById("Q6").value;
+      updatedHobby.FIDErating = document.getElementById("Q7").value;
     	 
 	  
  $.ajax({
@@ -275,16 +275,16 @@ function updateBookDataChenges(e) {
       e.preventDefault();
       var updatedBook = {};
       updatedBook.id = document.getElementById("_id").innerHTML;
-      updatedBook.fullname = document.getElementById("name").value;
+      updatedBook.name = document.getElementById("name").value;
       updatedBook.title = document.getElementById("title").value;
       updatedBook.author = document.getElementById("author").value;
       updatedBook.colour = document.getElementById("colour").value;
-      updatedBook.cover = document.getElementById("coverType").value;
+      updatedBook.coverType = document.getElementById("coverType").value;
       updatedBook.pages = document.getElementById("pages").value;
       updatedBook.price = document.getElementById("price").value;
       updatedBook.currency = document.getElementById("currency").value;
       updatedBook.language = document.getElementById("language").value;
-      updatedBook.olanguage = document.getElementById("originalLanguage").value;
+      updatedBook.originalLanguage = document.getElementById("originalLanguage").value;
       updatedBook.edition = document.getElementById("edition").value;
       updatedBook.dimensions = document.getElementById("dimensions").value;
       updatedBook.publisher = document.getElementById("publisher").value;
