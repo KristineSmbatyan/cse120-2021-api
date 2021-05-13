@@ -81,7 +81,7 @@ function genreValue(){
 }
 
 function ageRestrictionValue(){
-     myFavBooks.ageRestriction = document.getElementById ("AR").value;
+     myFavBooks.ageRestriction = document.getElementById ("ageRestriction").value;
 }
  
 function handleCoverValueChange(e) {

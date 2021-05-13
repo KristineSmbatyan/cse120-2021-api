@@ -18,13 +18,13 @@ function loadBookEditItem() {
     document.getElementById("price").value = editItem["price"];
     document.getElementById("currency").value = editItem["currency"];
     document.getElementById("language").value = editItem["language"];
-    document.getElementById("Olanguage").value = editItem["originalLanguage"];
+    document.getElementById("originalLanguage").value = editItem["originalLanguage"];
     document.getElementById("edition").value = editItem["edition"];
     document.getElementById("dimensions").value = editItem["dimensions"];
     document.getElementById("publisher").value = editItem["publisher"];
     document.getElementById("publishing date").value = editItem["publishingDate"];
     document.getElementById("genre").value = editItem["genre"];
-    document.getElementById("AR").value = editItem["ageRestriction"];
+    document.getElementById("ageRestriction").value = editItem["ageRestriction"];
 }
 
 function editData(id) {
