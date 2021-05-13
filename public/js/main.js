@@ -14,9 +14,9 @@ function loadBookEditItem() {
     document.getElementById("author").value = editItem["author"];   
     document.getElementById("pages").value = editItem["pages"];
     document.getElementById("colour").value = editItem["colour"];
-    document.getElementById("CoverType").value = editItem["coverType"];
-    document.getElementById("Price").value = editItem["price"];
-    document.getElementById("Currency").value = editItem["currency"];
+    document.getElementById("coverType").value = editItem["coverType"];
+    document.getElementById("price").value = editItem["price"];
+    document.getElementById("currency").value = editItem["currency"];
     document.getElementById("language").value = editItem["language"];
     document.getElementById("Olanguage").value = editItem["originalLanguage"];
     document.getElementById("edition").value = editItem["edition"];
