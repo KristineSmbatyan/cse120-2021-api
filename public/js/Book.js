@@ -162,7 +162,7 @@ function validateFormData() {
     var isFormValid = true;
     var keys = Object.keys(myFavBooks);
     keys.forEach(key => {
-        if (requiredFields.indexOf(key) > -1 && myFavBooks[key] == "") { console.log(key, " is a required field, please add a value") 
+        if (requiredFields.indexOf(key) > -1 && myFavBooks[key] == "") { console.log(key, " You forgot to fill in ") 
         if(document.getElementById(key)) { 
           document.getElementById(key).style.backgroundColor = "red"; 
           isFormValid = false;
