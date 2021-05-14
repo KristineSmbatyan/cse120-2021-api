@@ -114,9 +114,9 @@ function handleOrigLaguageChange(e){
   myFavBooks.originalLanguage = e.target.value;
   if (myFavBooks.language != "otherOrigLang"){
     myFavBooks.otherLanguage="";
-    document.getElementById("otherLangText").style.display="none";
+    document.getElementById("otherOrigLangText").style.display="none";
   } else{
-    document.getElementById("otherLangText").style.display="block";
+    document.getElementById("otherOrigLangText").style.display="block";
   }
 }
 
