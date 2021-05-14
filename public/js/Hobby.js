@@ -28,11 +28,11 @@ function handleFullNameChange(){
 }
 
 function handleStartDateChange(){
-  myFavHobby.startDate = document.getElementById ("Q1").value;
+  myFavHobby.startDate = document.getElementById ("startDate").value;
   if(myFavHobby.startDate ==""){
-     document.getElementById("Q1").style.backgroundColor="#B6271B";
+     document.getElementById("startDate").style.backgroundColor="#B6271B";
      }else {
-    document.getElementById("Q1").style.backgroundColor="white"
+    document.getElementById("startDate").style.backgroundColor="white"
   }
 }
 
