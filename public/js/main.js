@@ -242,14 +242,14 @@ function displayData(data, containerDivName) {
       e.preventDefault();
       var updatedHobby = {};
       updatedHobby.id = document.getElementById("_id").value;
-      updatedHobby.name = document.getElementById("name").value;
-      updatedHobby.Q1= document.getElementById("startDate").value;
-      updatedHobby.Q2 = document.getElementById("firstTeacher").value;
+      updatedHobby.fullName = document.getElementById("name").value;
+      updatedHobby.startDate= document.getElementById("Q1").value;
+      updatedHobby.firstTeacher = document.getElementById("Q2").value;
      
-      updatedHobby.Q4 = document.getElementById("beautifulTrait").value;
-      updatedHobby.Q5 = document.getElementById("favPlayer").value;
-      updatedHobby.Q6 = document.getElementById("playingStyle").value;
-      updatedHobby.Q7 = document.getElementById("FIDErating").value;
+      updatedHobby.beautifulTrait = document.getElementById("Q4").value;
+      updatedHobby.favPlayer = document.getElementById("Q5").value;
+      updatedHobby.playingStyle = document.getElementById("Q6").value;
+      updatedHobby.FIDErating = document.getElementById("Q7").value;
     	 
 	  
  $.ajax({
