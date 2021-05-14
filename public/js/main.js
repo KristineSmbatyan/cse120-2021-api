@@ -218,14 +218,13 @@ function loadExistingData() {
     document.querySelectorAll("#chessDataContainer div.item").forEach(div => {
           div.addEventListener("click", function(e){
           if (this.style.height == "auto") {
-          this.style.height = "30px";
-        } else {
-          this.style.height = "auto";
-        }
+            this.style.height = "30px";
+          } else {
+            this.style.height = "auto";
+          }
       })        
     })
 
-}
     document.querySelectorAll("#bookDataContainer div.item").forEach(div => {
           div.addEventListener("click", function(e){
           if (this.style.height == "auto") {
