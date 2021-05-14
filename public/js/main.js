@@ -244,7 +244,7 @@ function editData(id) {
  function updateHobbyDataChanges(e) {
       e.preventDefault();
       var updatedHobby = {};
-      updatedHobby.id = document.getElementById("_id").value;
+      updatedHobby.id = document.getElementById("_id").innerHTML;
       updatedHobby.fullName = document.getElementById("name").value;
       updatedHobby.startDate= document.getElementById("Q1").value;
       updatedHobby.firstTeacher = document.getElementById("Q2").value;
