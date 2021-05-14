@@ -222,9 +222,9 @@ function loadExistingData() {
           } else {
             this.style.height = "auto";
           }
-      })        
+        })        
     })
-
+    }
     document.querySelectorAll("#bookDataContainer div.item").forEach(div => {
           div.addEventListener("click", function(e){
           if (this.style.height == "auto") {
