@@ -82,7 +82,7 @@ function handleRatingChange() {
 
 function myFavHobbyData(e) {
   e.preventDefault();
-  if(validateFormData() == false) {
+    if(validateFormData() == false) {
     return;
   } else {console.log("The current value is", myFavHobby)
     Swal.fire("Good Job!", "Keep Playing Chess!", "success",).then(okay => {
@@ -91,9 +91,6 @@ function myFavHobbyData(e) {
     }
     });
   }
-
-
-  
 
   $.ajax({
     type: 'POST',
@@ -110,7 +107,6 @@ function myFavHobbyData(e) {
     complete: function () {
       console.log("Complete");  
     } 
-
   });
 }
 
