@@ -112,7 +112,7 @@ function handleLanguageChange(e){
 
 function handleOrigLaguageChange(e){
   myFavBooks.originalLanguage = e.target.value;
-  if (myFavBooks.language != "OtherLang"){
+  if (myFavBooks.language != "otherOrigLang"){
     myFavBooks.otherLanguage="";
     document.getElementById("otherLangText").style.display="none";
   } else{
