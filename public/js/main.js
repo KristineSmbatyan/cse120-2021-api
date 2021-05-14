@@ -242,7 +242,7 @@ function displayData(data, containerDivName) {
       e.preventDefault();
       var updatedHobby = {};
       updatedHobby.id = document.getElementById("_id").value;
-      updatedHobby.name = document.getElementById("fullName").value;
+      updatedHobby.name = document.getElementById("name").value;
       updatedHobby.startDate= document.getElementById("Q1").value;
       updatedHobby.firstTeacher = document.getElementById("Q2").value;
      
