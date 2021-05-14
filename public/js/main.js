@@ -47,7 +47,7 @@ function loadHobbyEditItem() {
     console.log(editItem);
     document.getElementById("_id").innerHTML = editItem["_id"];
     document.getElementById("name").value = editItem["fullName"];
-    document.getElementById("Q1").value = editItem["startDate"];   
+    document.getElementById("startDate").value = editItem["startDate"];   
     document.getElementById("Q1'").value = editItem["fallInLove"];   
     document.getElementById("Q2").value = editItem["firstTeacher"];
     document.getElementById("Q3.1").value = editItem["playingYearLenght"];
@@ -246,7 +246,7 @@ function editData(id) {
       var updatedHobby = {};
       updatedHobby.id = document.getElementById("_id").value;
       updatedHobby.fullName = document.getElementById("name").value;
-      updatedHobby.startDate= document.getElementById("Q1").value;
+      updatedHobby.startDate= document.getElementById("startDate").value;
       updatedHobby.firstTeacher = document.getElementById("Q2").value;
      
       updatedHobby.beautifulTrait = document.getElementById("Q4").value;
