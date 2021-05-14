@@ -129,9 +129,9 @@ function loadExistingData() {
   $.ajax({
     type : "GET",
     url : "https://cse120-2021-kristine.herokuapp.com/data",
-    dataType : "json",
     data : MyFavHobby ,
     cache : false ,
+    dataType : "json",
     success : function(data) {
     console.log("success", data);
     existingData = data;
